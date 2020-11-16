@@ -161,12 +161,26 @@
 		  </div>
 		  </div>
 	      <ul id="filters" class="clearfix wow bounceIn" data-wow-delay="0.4s">
+			<% 
+			blog.forEach(function(pst){ %>
 			<li><span class="filter active" data-filter="app card icon logo fun">ALL</span></li>
-			<li><span class="filter" data-filter="app">Domestic Travel</span></li>
-			<li><span class="filter" data-filter="card">Foreign Travel</span></li>
-			<li><span class="filter" data-filter="icon">Short Date Tour</span></li>
-			<li><span class="filter" data-filter="fun">Long Date Tour</span></li>
-	        </ul>
+			<li><span class="filter" data-filter="app"><%= pst.category %></span></li>
+			<input type="hidden" name="category" value="<%= pst.category %>">
+		
+			<% 
+				
+		}); 
+	 
+	 %>				
+		
+
+			</ul>
+			
+
+
+
+	    	<% 
+			blog.forEach(function(pst){ %>
 	     <div id="portfoliolist">
 					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">		
@@ -174,83 +188,58 @@
 						     <img src="/abc/images/t1.jpg" class="img-responsive" alt=""/></a>
 							<div class="tour-caption">
 							<span> </span>
-							<p>Phu Quoc Resort & Spa</p>
+							<p><%= pst.placename %></p>
 							</div>
-
-						</div>
-					</div>				
-					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">		
-							<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
-						     <img src="abc/images/t2.jpg" class="img-responsive" alt=""/></a>
-							 <div class="tour-caption">
-							 <span> </span>
-							 <p>Phu Quoc Resort & Spa</p>
-						     </div>
 
 						</div>
 					</div>		
+				 <% 
+				
+					}); 
+				 
+				 %>		
+						 
+				 	<% 
+			blog.forEach(function(pst){ %>
+	     <div id="portfoliolist">
 					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">		
 							<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
-						     <img src="images/t3.jpg" class="img-responsive" alt=""/></a>
-							 <div class="tour-caption">
-							 <span> </span>
-							 <p>Phu Quoc Resort & Spa</p>
-							 </div>
-						</div>
-					</div>				
-					<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">		
-							<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
-						     <img src="images/t4.jpg" class="img-responsive" alt=""/></a>
-							 <div class="tour-caption">
-							 <span> </span>
-							<p>Phu Quoc Resort & Spa</p>
-							</div>
-						</div>
-					</div>	
-					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">		
-							<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
-						     <img src="images/t5.jpg" class="img-responsive" alt=""/></a>
-							 <div class="tour-caption">
-							 <span> </span>
-							 <p>Phu Quoc Resort & Spa</p>
-							 </div>
-						</div>
-					</div>			
-					<div class="portfolio fun mix_all" data-cat="fun" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">		
-							<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
-						     <img src="images/t6.jpg" class="img-responsive" alt=""/></a>
-							 <div class="tour-caption">
-							 <span> </span>
-							<p>Phu Quoc Resort & Spa</p>
-							</div>
-						</div>
-			      </div>
-				  <div class="portfolio fun mix_all" data-cat="fun" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">		
-							<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
-							<img src="images/t7.jpg" class="img-responsive" alt=""/></a>
+						     <img src="/abc/images/t1.jpg" class="img-responsive" alt=""/></a>
 							<div class="tour-caption">
 							<span> </span>
-							<p>Phu Quoc Resort & Spa</p>
+							<p><%= pst.placename %></p>
 							</div>
+
 						</div>
-			      </div>
-				  <div class="portfolio icon mix_all" data-cat="fun" style="display: inline-block; opacity: 1;">
+					</div>		
+				 <% 
+				
+					}); 
+				 
+				 %>		
+					
+				 
+		   <div class="clearfix"></div>	
+		   	<% 
+			blog.forEach(function(pst){ %>
+	     <div id="portfoliolist">
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">		
 							<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
-						     <img src="images/t8.jpg" class="img-responsive" alt=""/></a>
-							 <div class="tour-caption">
-							 <span> </span>
-							 <p>Phu Quoc Resort & Spa</p>
-							 </div>
-					   </div>
-			      </div>
-		   <div class="clearfix"></div>	
+						     <img src="/abc/images/t1.jpg" class="img-responsive" alt=""/></a>
+							<div class="tour-caption">
+							<span> </span>
+							<p><%= pst.placename %></p>
+							</div>
+
+						</div>
+					</div>		
+				 <% 
+				
+					}); 
+				 
+				 %>		
 	  </div>
 </div>
 </div>  
