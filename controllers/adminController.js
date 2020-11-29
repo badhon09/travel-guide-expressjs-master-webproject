@@ -16,11 +16,23 @@ router.get('/', (req, res)=>{
 	});
 });
 });
+router.get('/scouts/delete/:id', (req, res)=>{
+
+	userModel.deleteuserbyid(req.params.id,function(results){
+		res.redirect('adminhome/scouts')
+    });
+});
 
 router.get('/users', (req, res)=>{
 
 	userModel.getAllUsers(function(results){
 		res.render('admin/users', {users: results});
+    });
+});
+router.get('/users/delete/:id', (req, res)=>{
+
+	userModel.deleteuserbyid(req.params.id,function(results){
+		res.redirect('adminhome/users')
     });
 });
 
@@ -30,6 +42,7 @@ router.get('/scouts', (req, res)=>{
 		res.render('admin/scout', {users: results});
     });
 });
+
 
 router.get('/posts', (req, res)=>{
 

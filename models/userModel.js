@@ -32,6 +32,12 @@ module.exports= {
 			callback(results);
 		});
 	},
+	deleteuserbyid: function(c,callback){
+		var sql = "delete from users where id = '"+c+"'";
+		db.getResults(sql, function(results){
+			callback(results);
+		});
+	},
 	getAllScouts: function(callback){
 		var sql = "select * from users where type='scout'";
 		db.getResults(sql, function(results){
