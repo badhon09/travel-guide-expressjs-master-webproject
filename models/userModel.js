@@ -32,6 +32,12 @@ module.exports= {
 			callback(results);
 		});
 	},
+	getwhislist: function(callback){
+		var sql = "select * from whislist";
+		db.getResults(sql, function(results){
+			callback(results);
+		});
+	},
 	deleteuserbyid: function(c,callback){
 		var sql = "delete from users where id = '"+c+"'";
 		db.getResults(sql, function(results){
@@ -43,6 +49,13 @@ module.exports= {
 		db.getResults(sql, function(results){
 			callback(results);
 		});
+	},
+	insertwhislist:  function(whl, callback){
+		var sql = "insert into whislist(name,username,date) values ('"+whl.name+"','"+whl.username+"','"+whl.date+"')";
+		db.getResults(sql,function(results){
+			callback(results);
+		});
+
 	},
 	insert: function(user, callback){
 		var sql = "insert into users(name,username,email,password,photo,type) values ('"+user.name+"','"+user.username+"','"+user.email+"','"+user.password+"','"+user.photo+"','"+user.type+"')";

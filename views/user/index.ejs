@@ -32,11 +32,10 @@
 						</div>
 						<div class="menu">
 						<ul id="nav">
-							 <li><a href="#section-1">Home</a></li>
-							 <li><a href="#section-2">About</a></li>
-							 <li><a href="#section-3">Top tours</a></li>
-							 <li><a href="#section-4">Guides</a></li>
-							 <li><a href="#section-5">Contact</a></li>
+							 <li><a href="/userhome">Home</a></li>
+							 <li><a href="/userhome/profile">Profile</a></li>
+							 <li><a href="/userhome/mywhislist">My Whislist</a></li>
+							 
 							 <li><a href="/logout">logout</a></li>
 							
 							 <div class="clearfix"></div>
@@ -179,36 +178,19 @@
 
 
 
-	    	<% 
-			blog.forEach(function(pst){ %>
-	     <div id="portfoliolist">
-					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">		
-							<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
-						     <img src="/abc/images/t1.jpg" class="img-responsive" alt=""/></a>
-							<div class="tour-caption">
-							<span> </span>
-							<p><%= pst.placename %></p>
-							</div>
-
-						</div>
-					</div>		
-				 <% 
-				
-					}); 
-				 
-				 %>		
-						 
+ 
 				 	<% 
 			blog.forEach(function(pst){ %>
 	     <div id="portfoliolist">
 					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">		
-							<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+							
 						     <img src="/abc/images/t1.jpg" class="img-responsive" alt=""/></a>
 							<div class="tour-caption">
 							<span> </span>
+							<a href="" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim"></a>
 							<p><%= pst.placename %></p>
+							<a href="/userhome/mywhislist/add/<%= pst.placename %>" class="btn btn-md btn-primary">Add to Whislist</a>
 							</div>
 
 						</div>
@@ -220,27 +202,7 @@
 				 %>		
 					
 				 
-		   <div class="clearfix"></div>	
-		   	<% 
-			blog.forEach(function(pst){ %>
-	     <div id="portfoliolist">
-					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">		
-							<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
-						     <img src="/abc/images/t1.jpg" class="img-responsive" alt=""/></a>
-							<div class="tour-caption">
-							<span> </span>
-							<p><%= pst.placename %></p>
-							</div>
-
-						</div>
-					</div>		
-				 <% 
-				
-					}); 
-				 
-				 %>		
-	  </div>
+		 
 </div>
 </div>  
 <!-- Script for gallery Here-->
@@ -280,15 +242,7 @@
 </script>
 <!--Gallery Script Ends-->	 
 <!--/top-tours-->
-<div class="tour-guides section" id="section-4" >
-	  <div class="tour-guides-head text-center">
-		  <h3>TOUR GUIDES</h3>
-		  <span></span><img src="images/guide.png" alt=""><span></span>
-		  <div class="container">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-				   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		  </div>
-	  </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	  <div class="container">
 		<!-- requried-jsfiles-for owl -->
 				<link href="css/owl.carousel.css" rel="stylesheet">
@@ -306,320 +260,8 @@
 							    });
 							    </script>
 			<!-- //requried-jsfiles-for owl -->
-		  <div id="owl-demo" class="owl-carousel">
-			  <div class="item text-center guide-sliders">
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g1.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Elena Smith</a></p>
-					 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g2.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">John Wilson</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g3.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Kelly Gomez</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g4.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Alex Franky</a></p>
-				 </div>   
-			  </div>
-			  <div class="item text-center guide-sliders">
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g5.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">John</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g6.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Joe Winifred</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g7.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Kevin</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g8.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Fedora Willam</a></p>
-				 </div>   
-			  </div>
-			  <div class="item text-center guide-sliders">
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g9.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Charles John</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g10.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Sunny Martin</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g11.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Alize Smith</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g12.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Tom Crusis</a></p>
-				 </div>   
-			  </div>   
-			 <div class="item text-center guide-sliders">
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g4.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Elena Smith</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g3.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">John Wilson</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g2.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Kelly Gomez</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g1.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Alex Franky</a></p>
-				 </div>   
-			  </div>
-			  <div class="item text-center guide-slide">
-			  <div class="col-md-3 image-grid">
-					 <img src="images/g8.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">John</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g7.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Joe Winifred</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g6.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Kevin</a></p>
-				 </div>
-				 <div class="col-md-3 image-grid">
-					 <img src="images/g5.jpg">
-					 <div class="guide-caption">
-					 <span></span>
-						<a href="#"><span class="twit"> </span></a>
-						<a href="#"><span class="fb"> </span></a>
-						<a href="#"><span class="gplus"> </span></a>
-					 </div>
-					 <p><a href="#">Fedora Willam</a></p>
-				 </div> 
-			  </div>
-		  </div>
-		</div>
-</div>
-<!--client-say-->
-<div class="client-say">
-	 <div class="client-say-layer">
-	     <div class="client-say-head text-center">
-			  <h3>CLIENT SAY</h3>
-			  <span></span><img src="images/face.png" alt=""><span></span>
-			  <!-- requried-jsfiles-for owl -->
-				<link href="css/owl.carousel.css" rel="stylesheet">
-							    <script src="js/owl.carousel.js"></script>
-							        <script>
-							    $(document).ready(function() {
-							      $("#owl-demo1").owlCarousel({
-							        items : 1,
-							        lazyLoad : true,
-							        autoPlay : true,
-							        navigation : false,
-							        navigationText :  false,
-							        pagination : true,
-							      });
-							    });
-							    </script>
-			 <!-- //requried-jsfiles-for owl -->
-		     <div id="owl-demo1" class="owl-carousel">
-				  <div class="item">
-					  <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-							<h4>Anna Smith</h4>
-						    <h6><span></span></h6>
-					  </div> 
-				  </div>
-				   <div class="item">
-					  <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-							<h4>Anna Smith</h4>
-						    <h6><span></span></h6>
-					  </div> 
-				  </div>
-				   <div class="item">
-					   <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-							<h4>Smith</h4>
-						    <h6><span></span></h6>
-					   </div> 
-				  </div>
-				  <div class="item">
-					  <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-						    <h4>Amith</h4>
-						    <h6><span></span></h6>
-					  </div> 
-				  </div>
-				  <div class="item">
-					   <div class="client-say-info">
-							<p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
-							<h4>John Smith</h4>
-						    <h6><span></span></h6>
-					  </div> 
-				  </div>
-			  </div>
-          </div>
-      </div>
-</div>
-<!--/client-say-->
-<div id="section-5" class="contact section">
-	  <div class="contact-head text-center">
-		  <h3>CONTACT US</h3>
-		  <span></span><img src="images/mail.png" alt=""><span></span>
-		  <div class="contact-grids">
-			  <div class="container">
-				  <div class="col-md-4 address">
-						<h4>Lorem ipsum dolor sit amet,consec</h4>
-						<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip 
-						ex ea commodo consequat.</p>
-						<h5><span class="img1"></span>(+1) 234 56 789&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;(+1) 234 56 780</h5>
-						<h5><span class="img2"></span><a href="#">info[at]mytour.com&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;support[at]mytour.com</a></h5>
-						<h5><span class="img3"></span>1100 High Street,New York City,USA.</h5>
-				  </div>
-				  <div class="col-md-8 contact">	
-					  <form>
-					  <input type="text" class="text" value=" Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}">
-					  <input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your mail';}">
-					  <textarea onfocus="if(this.value == 'Message') this.value='';" onblur="if(this.value == '') this.value='Enter Message Here';" >Message</textarea>
-					  <input type="submit" value="Send message">
-					  <div class="clearfix"></div>
-					   </form>
-				   </div>
-				  <div class="clearfix"></div>
-			  </div>
-		  </div>
-	        <div class="map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d193683.36875212385!2d-74.30999320395165!3d40.66730031841747!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1411724375639" frameborder="0" style="border:0"></iframe>
-		    <span></span>
-			</div>
-	  </div>
-</div>
+		 
+
 <div class="fotter">	
 	 <div class="container">
 		 <div class="fotter-grids">

@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>My-tour bootstrap Design website | Home :: w3layouts</title>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href="/abc/css/bootstrap.css" rel='stylesheet' type='text/css'/>
+<link href="/abc/css/stylex.css" rel="stylesheet" type="text/css" media="all"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--js--> 
+<script src="/abc/js/jquery.min.js"></script>
+
+<!--/js-->
+<!--animated-css-->
+<link href="/abc/css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="/abc/js/wow.min.js"></script>
+<script>
+ new WOW().init();
+</script>
+<!--/animated-css-->
+</head>
+<body>
+<!--header-->
+<!--sticky-->
+	 <div class="header-top">
+		 <!--container-->
+		  <div class="container">
+			 <div class="top-nav">
+						<div class="logo">
+						<a href="#"><img src="/abc/images/logo.png" id="section-1" class="img-responsive" alt=""/></a>
+						</div>
+						<div class="menu">
+						<ul id="nav">
+							 <li><a href="/userhome">Home</a></li>
+							 <li><a href="/userhome/profile">Profile</a></li>
+							 <li><a href="/mywhislist">My Whislist</a></li>
+							 
+							 <li><a href="/logout">logout</a></li>
+							
+							 <div class="clearfix"></div>
+						 </ul>
+						 </div>
+			 </div>
+              <div class="clearfix"> </div>
+              <br><br><br><br><br><br>
+              <center>
+              <% 
+              whislist.forEach( function(std){ %>
+                <table border="1">
+                    <tr>
+                        <th>Placename</th>
+                        <th>username</th>
+                        <th>date</th>
+                        <th>action</th>
+                        
+                        
+                    </tr>
+                    <tr>
+                        <th> <%= std.name %></th>
+                        <th> <%= std.username %></th>
+                        <th><%= std.date %></th>
+                        <th><a href="" class="btn btn-sm btn-primary">checkout</a></th>
+                        
+                        
+                    </tr>
+                    
+                    
+                    </table>
+                    <br><br><br><br><br><br>
+
+
+                <%
+                }); 
+              %>
+            </center>
+			
+
+		 </div>
+		 <!--/container-->
+	 </div>
+<!--/sticky-->
+<!---banner--->
+<!----start-slider-script---->
+	
+<div class="fotter">	
+	 <div class="container">
+		 <div class="fotter-grids">
+			 <div class="col-md-4 fotter-left">
+			 <img src="images/fotter-logo.png" alt="">
+			 <p>Voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+				sed quia consequuntur magni dolores eos qui ratione.</p>
+			 </div>
+			 <div class="col-md-4 fotter-middle">
+				 <h3>Latest News</h3>
+				 <div class="footer-list">
+						<ul>
+						<li><a href="#"><span></span>Sed ut perspiciatis unde omnis iste natus.</a></li> 
+						<li><a href="#"><span></span>Voluptatem accusantium.</a></li> 
+						<li><a href="#"><span></span>Totam rem aperiam,eaque ipsa quae.</a></li> 
+						<li><a href="#"><span></span>Inventore veritatis et quae.</a></li> 
+						<li><a href="#"><span></span>Nemo enim ipsum voluptatem quia voluptas.</a></li>
+						</ul>
+				 </div>
+			 </div>
+			 <div class="col-md-4 fotter-right">
+			 <h3>Newsletter</h3>
+			 <form>
+			 <input type="text" class="text" value="E-mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your mail';}">
+			 <input type="submit" value="Send">
+			 <div class="clearfix"></div>
+			 </form>
+			 <div class="social-icons">
+			 <a href="#"><span class="facebook"> </span></a>
+			 <a href="#"><span class="twitter"> </span></a>
+			 <a href="#"><span class="googleplus"> </span></a>
+			 <a href="#"><span class="pinterest"> </span></a>
+			 <a href="#"><span class="instagram"> </span></a>
+			 </div>
+			 <div class="clearfix"></div>
+	     </div>
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+</div>  
+<div class="copyright text-center">
+<p>Template by <b>Badhon Ghosh</b></p>
+</div>
+  <script src="/abc/js/jquery.scrollTo.js"></script>
+	<script src="/abc/js/jquery.nav.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#nav').onePageNav({
+			begin: function() {
+			console.log('start')
+			},
+			end: function() {
+			console.log('stop')
+			}
+		});
+	});
+	</script>
+  
+</body>
+</html>
