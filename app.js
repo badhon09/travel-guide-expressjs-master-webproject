@@ -6,6 +6,8 @@ const cookieParser 		= require('cookie-parser');
 
 const home				= require('./controllers/userpageController');
 const userhome				= require('./controllers/userController');
+const scouthome				= require('./controllers/scoutController');
+const adminhome				= require('./controllers/adminController');
 const login				= require('./controllers/login');
 const logout			= require('./controllers/logout');
 //const logout			= require('./controllers/logout');
@@ -28,6 +30,8 @@ app.use(exSession({secret: 'secret value', saveUninitialized: true, resave: fals
 app.use('/', home);
 app.use('/login', login);
 app.use('/userhome', userhome);
+app.use('/scouthome', scouthome);
+app.use('/adminhome', adminhome);
 app.use('/logout', logout);
 //router
 app.get('/', (req, res)=>{

@@ -14,11 +14,31 @@ router.post('/', (req, res)=>{
 	};
 
 	userModel.validate(user, function(status){
+		console.log('aaaaaaaaaaaaaaaa',status[0].type);
 		if(status){
-			res.cookie('uname', req.body.username);
+
+			if(status[0].type=="user")
+			//res.cookie('uname', req.body.username);
 			
 			res.redirect('/userhome');
-		}else{
+		}
+		else if(status[0].type=="admin"){
+		
+		//res.cookie('uname', req.body.username);
+		
+		res.redirect('/adminhome');
+		
+		}
+		else if(status[0].type=="scout"){
+		
+			//res.cookie('uname', req.body.username);
+			
+			res.redirect('/scouthome');
+			
+			}
+		
+		
+		else{
 			res.redirect('/login');
 		}
 	});
