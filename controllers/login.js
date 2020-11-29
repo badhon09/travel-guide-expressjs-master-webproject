@@ -18,7 +18,7 @@ router.post('/', (req, res)=>{
 		if(status){
 
 			if(status[0].type=="user"){
-			//res.cookie('uname', req.body.username);
+			res.cookie('uname', req.body.username);
 			
 			res.redirect('/userhome');
 		}
@@ -31,7 +31,7 @@ router.post('/', (req, res)=>{
 		}
 		else if(status[0].type=="scout"){
 		
-			//res.cookie('uname', req.body.username);
+			res.cookie('uname', req.body.username);
 			
 			res.redirect('/scouthome');
 		}else{
