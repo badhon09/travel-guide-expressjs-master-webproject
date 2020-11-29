@@ -9,6 +9,7 @@ const userhome				= require('./controllers/userController');
 const scouthome				= require('./controllers/scoutController');
 const adminhome				= require('./controllers/adminController');
 const login				= require('./controllers/login');
+const registration		= require('./controllers/registration');
 const logout			= require('./controllers/logout');
 //const logout			= require('./controllers/logout');
 //const home				= require('./controllers/home');
@@ -32,6 +33,7 @@ app.use('/login', login);
 app.use('/userhome', userhome);
 app.use('/scouthome', scouthome);
 app.use('/adminhome', adminhome);
+app.use('/registration', registration);
 app.use('/logout', logout);
 //router
 app.get('/', (req, res)=>{

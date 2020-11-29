@@ -6,7 +6,7 @@ const router 	= express.Router();
 router.get('/', (req, res)=>{
 
 	userModel.getAll(function(results){
-		res.render('user/index', {blog: results});
+		res.render('admin/index', {blog: results});
     });
 });
 

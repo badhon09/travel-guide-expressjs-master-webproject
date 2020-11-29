@@ -17,7 +17,7 @@ router.post('/', (req, res)=>{
 		console.log('aaaaaaaaaaaaaaaa',status[0].type);
 		if(status){
 
-			if(status[0].type=="user")
+			if(status[0].type=="user"){
 			//res.cookie('uname', req.body.username);
 			
 			res.redirect('/userhome');
@@ -34,14 +34,17 @@ router.post('/', (req, res)=>{
 			//res.cookie('uname', req.body.username);
 			
 			res.redirect('/scouthome');
+		}else{
 			
-			}
-		
-		
-		else{
-			res.redirect('/login');
 		}
+	}else{
+		res.redirect('/login');
+	}
+			
+			
+	
 	});
+	
 }); 
 module.exports = router;
 

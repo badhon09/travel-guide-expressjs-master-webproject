@@ -21,9 +21,9 @@ module.exports= {
 		});
 	},
 	insert: function(user, callback){
-		var sql = "insert into users(name,email,password) values ('"+user.username+"','"+user.email+"','"+user.password+"')";
-		db.execute(sql,function(status){
-			callback(status);
+		var sql = "insert into users(name,username,email,password,photo,type) values ('"+user.name+"','"+user.username+"','"+user.email+"','"+user.password+"','"+user.photo+"','"+user.type+"')";
+		db.getResults(sql,function(results){
+			callback(results);
 		});
 
 	},
