@@ -55,9 +55,6 @@
     </nav>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
-      <!-- partial:partials/_settings-panel.html -->
-      <!-- partial -->
-      <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
@@ -72,6 +69,7 @@
               <span class="menu-title">Users</span>
             </a>
           </li>
+
 		  <li class="nav-item">
             <a class="nav-link" href="/adminhome/scouts">
               <i class="mdi mdi-grid-large menu-icon"></i>
@@ -96,48 +94,56 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
-
-
-<div class="container">
-  <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-6">
-          <div class="well well-sm">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Data table</h4>
               <div class="row">
-                  <div class="col-sm-6 col-md-4">
-                      <img src="uploads/p.jpg" width="120" alt="" class="img-rounded img-responsive" />
-                  </div>
-                  <% 
-                  profile.forEach( function(std){ %>
-                  <div class="col-sm-6 col-md-8">
-                      <h4>Name:
-                        <%= std.name %></h4>
-                     
-                      <p>
-                          <i class="glyphicon glyphicon-envelope"></i>Email:<%= std.email %>
-                          <br />
-                         
-                          <br />
-                          <i class="glyphicon glyphicon-gift"></i>Username: <%= std.username %></p>
-                      <!-- Split button -->
-                      <div class="btn-group">
-                         <a href="" class="btn btn-md">edit</a>
-                         
-                      </div>
-                      <%
+                <div class="col-12">
+                  <div class="table-responsive">
+                    <table id="order-listing" class="table">
+                      <thead>
+                        <tr>
+                           
+                            <th>Name</th>
+                            <th>UserName</th>
+                            <th>Email</th>
+                            <th>password</th>
+                            
+                            <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% 
+                        users.forEach( function(std){ %>
+                        <tr>
+                           
+                            <td><%= std.name %></td>
+                            <td><%= std.username %></td>
+                            <td><%= std.email %></td>
+                            <td><%= std.password %></td>
+                            
+                            
+                            <td>
+                              <a href="" class="btn btn-outline-primary">Edit</a>
+                              <a href="adminhome/users/delete/<%= std.id %>" class="btn btn-outline-primary">Delete</a>
+                            </td>
+                        </tr>
+                        <%
                 }); 
               %>
+                        
+                     
+                      </tbody>
+                    </table>
                   </div>
+				</div>
               </div>
+            </div>
           </div>
-      </div>
-  </div>
-</div>
-
-          
-          
-        </div>
+        
+		</div>
         <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
+        <!-- partial:../../partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 <a href="https://www.urbanui.com/" target="_blank">Urbanui</a>. All rights reserved.</span>
@@ -153,6 +159,8 @@
 
   <!-- plugins:js -->
   <script src="assets/js/vendor.bundle.base.js"></script>
+  <script src="assets/js/jquery.dataTables.js"></script>
+  <script src="assets/js/dataTables.bootstrap4.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->
   <script src="assets/js/Chart.min.js"></script>
@@ -167,6 +175,7 @@
   <!-- endinject -->
   <!-- Custom js for this page-->
   <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/data-table.js"></script>
   <!-- End custom js for this page-->
 </body>
 </html>

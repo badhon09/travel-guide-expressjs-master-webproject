@@ -20,6 +20,24 @@ module.exports= {
 			callback(results);
 		});
 	},
+	getAllUsers: function(callback){
+		var sql = "select * from users where type='user'";
+		db.getResults(sql, function(results){
+			callback(results);
+		});
+	},
+	getProfile: function(c,callback){
+		var sql = "select * from users where username='"+c+"'";
+		db.getResults(sql, function(results){
+			callback(results);
+		});
+	},
+	getAllScouts: function(callback){
+		var sql = "select * from users where type='scout'";
+		db.getResults(sql, function(results){
+			callback(results);
+		});
+	},
 	insert: function(user, callback){
 		var sql = "insert into users(name,username,email,password,photo,type) values ('"+user.name+"','"+user.username+"','"+user.email+"','"+user.password+"','"+user.photo+"','"+user.type+"')";
 		db.getResults(sql,function(results){
