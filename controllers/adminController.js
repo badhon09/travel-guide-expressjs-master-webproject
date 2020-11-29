@@ -3,6 +3,15 @@ const userModel		= require('../models/userModel');
 const blogModel = require('../models/blogModel');
 const router 	= express.Router();
 
+router.get('*',  (req, res, next)=>{
+	if(req.cookies['uname'] == null){
+		res.redirect('/login');
+	}else{
+		next();
+	}
+}); 
+
+
 router.get('/', (req, res)=>{
 
 	c=req.cookies['uname'];
